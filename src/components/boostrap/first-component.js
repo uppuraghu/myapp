@@ -14,6 +14,7 @@ const Firstcomponent =()=>{
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...
               </p>
             </div>
+            
             <customAccordion/>
 
             <div className="col-sm-4">
