@@ -1,21 +1,12 @@
 import React from 'react';
-// import ButtonComponentsClass from './components/class-component/button';
-// import TodoComponent from './components/class-component/todo/todo';
-// import { Heading1 } from './components/headings/headings';
-import ProductListing from './components/class-component/productListing/productListing';
+import Unmountaing from './components/class-component/unmountaing/unMountaing';
 
 const App = () => {
   return (
     <div>
-      {/* <Heading1/>
-      <ButtonComponentsClass/>
-      <TodoComponent/> */}
-      <ProductListing/>
-      
-     
+      <Unmountaing/>
     </div>
   );
 }
 
 export default App;
-
