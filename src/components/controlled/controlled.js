@@ -1,5 +1,6 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { useState } from 'react';
+import SuccessScreen from './sucess';
 
 export default function ControlledForm() {
    const [userName,setUserName]=useState("")
@@ -7,6 +8,7 @@ export default function ControlledForm() {
    const [password,setPassword]=useState("")
    const [passwordError,setPasswordError]=useState(false)
    const [isLogin,setIsLogin]=useState(false)
+   const[userDetails,setUserdetails]=useState({})
 
 
    const [serverError,setserverError]=useState(false)
@@ -38,8 +40,9 @@ export default function ControlledForm() {
             if(Response.message){
                 setserverError(Response.message)
             }else{
+              setUserdetails(Response)
                 setserverError(false)
-                // alert("login success")
+                //  alert("login success")
                 setIsLogin(true)
             }
           });
@@ -50,6 +53,7 @@ export default function ControlledForm() {
         if(name.length>10){
             validUsername=false
         }else{
+          
             validUsername=true
         }
         return validUsername
@@ -85,22 +89,12 @@ export default function ControlledForm() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
-
-      <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <>
+    {isLogin?(
+        <SuccessScreen data={userDetails} />
+      ) :(
+        <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
             <img
@@ -214,6 +208,11 @@ export default function ControlledForm() {
           </form>
         </div>
       </div>
+        
+      )
+    }
+    </>
+     
    
   )
 }

@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-function sucessscreen() {
+function SuccessScreen(props) {
+  const{data}=props
   return (
     <div>
-      <h3>wellcome user</h3>
+      <h3>Welcome user{data.username}</h3>
     </div>
-  )
+  );
 }
 
-export default sucessscreen;
+export default SuccessScreen;
+
