@@ -10,6 +10,10 @@ export default function ControlledForm() {
    const [isLogin,setIsLogin]=useState(false)
    const[userDetails,setUserdetails]=useState({})
 
+  const [formItems,setFormItems]=useState({
+    username:"",
+    password:"",
+  })
 
    const [serverError,setserverError]=useState(false)
 
@@ -87,7 +91,13 @@ export default function ControlledForm() {
         }
     }
 
-
+    const formHandler=(event)=>{
+      const {value,name}=event.target;
+      console.log(value,name)
+      setFormItems({...formItems,[name]:value})
+     
+      }
+    
 
   return (
     <>
@@ -119,11 +129,11 @@ export default function ControlledForm() {
                 </label>
                 <input
                   id="email-address"
-                  name="email"
+                  name="username"
                   type="text"
                   autoComplete="email"
-                  value={userName}
-                  onChange={usernameHandler}
+                  value={formItems.username}
+                  onChange={formHandler}
                   required
                  
                   className="appearance-none rounded-none relative block
@@ -144,8 +154,8 @@ export default function ControlledForm() {
                   name="password"
                   type="password"
                   autoComplete="current-password"
-                  value={password}
-                  onChange={passwordHandler}
+                  value={formItems.password}
+                  onChange={formHandler}
                   required
                   className="appearance-none rounded-none relative block
                   w-full px-3 py-2 border border-gray-300
