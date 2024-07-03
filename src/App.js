@@ -1,7 +1,10 @@
 import React from 'react';
+import Appapp from './components/RRCARSOL/form02';
+// import Rcar from './components/RRCARSOL/rcar';
+// import { Carousel } from 'react-responsive-carousel';
 
-import From from './components/forms/uncontrolled/form';
-import ControlledForm from './components/controlled/controlled';
+// import From from './components/forms/uncontrolled/form';
+// import ControlledForm from './components/controlled/controlled';
 // import CircleComponent from './components/class-component/circleTask/circle';
 // import UseStateExample from './components/functionalHooks/useState/usestate';
 // import TodoComponent from './components/functionalHooks/useState/todo';
@@ -13,12 +16,16 @@ import ControlledForm from './components/controlled/controlled';
 const App = () => {
   return (
     <div>
-     
+     {/* <Rcar/> */}
+   <Appapp/>
      {/* <h1 className="text-3xl font-bold underline">
       Hello world!
     </h1>  */}
     {/* <From/> */}
-    <ControlledForm/>
+    {/* <ControlledForm/> */}
+  
+   
+   
     </div>
   );
 }
