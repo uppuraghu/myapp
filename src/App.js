@@ -1,7 +1,9 @@
 import React from 'react';
+import Stacks from './Navigations/stack';
 
-import From from './components/forms/uncontrolled/form';
-import ControlledForm from './components/controlled/controlled';
+// Uncomment the following lines as needed
+// import From from './components/forms/uncontrolled/form';
+// import ControlledForm from './components/controlled/controlled';
 // import CircleComponent from './components/class-component/circleTask/circle';
 // import UseStateExample from './components/functionalHooks/useState/usestate';
 // import TodoComponent from './components/functionalHooks/useState/todo';
@@ -13,15 +15,11 @@ import ControlledForm from './components/controlled/controlled';
 const App = () => {
   return (
     <div>
-     
-     {/* <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>  */}
-    {/* <From/> */}
-    <ControlledForm/>
+      <Stacks />
     </div>
   );
 }
 
 export default App;
+
 
