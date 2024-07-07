@@ -1,5 +1,6 @@
 import React from 'react';
 import Stacks from './Navigations/stack';
+import ButtonComponent from './components/button/button';
 
 // Uncomment the following lines as needed
 // import From from './components/forms/uncontrolled/form';
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div>
       <Stacks />
+      <ButtonComponent/>
     </div>
   );
 }
