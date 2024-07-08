@@ -5,6 +5,9 @@ import axios from 'axios';
 
 import ButtonComponent from '../button/button';
 import { Link } from 'react-router-dom';
+import UseEffectExample from '../useEffect/useEffectEX1';
+import UseEffectExample2 from '../useEffect/useEffectEX2';
+import UseEffectEX3 from '../useEffect/useEffectEX3';
 
 
 function HomeScreen() {
@@ -22,14 +25,17 @@ function HomeScreen() {
     <div>
       <Navbar />
       <h2>Welcome to Home Screen</h2>
+      {/* <UseEffectExample2/>
+<UseEffectExample/> */}
+<UseEffectEX3/>
 
-    <button onClick={fetchData}>  Fetch data</button>
+    {/* <button onClick={fetchData}>  Fetch data</button> */}
 
-    {
+    {/* {
       data.length>0?(
         <>
        
-        {data.map((each) => {
+        {data?.map((each) => {
               return (
                 <Link to={`/${each.category}/${each.id}/info`}>
 
@@ -47,7 +53,7 @@ function HomeScreen() {
       )
       
 
-    }
+    } */}
     </div>
   );
 }
