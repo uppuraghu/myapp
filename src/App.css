@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,24 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.color-picker-container{
+  display: flex;
+           flex-direction: column;
+           align-items: center;
+}
+h1{
+  margin: 50px;
+  font-size: 3rem;
+}
+.color-display{
+  height: 300px;
+  width:300px;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
