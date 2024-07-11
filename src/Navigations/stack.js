@@ -15,7 +15,7 @@ export const ProfileWrapper=createContext()
 
 function Stacks() {
   const [profileInfo,setProfileInfo]=useState({
-    name:"ram",
+    name:<img src='https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg'/>,
     salary:20000,
   })
 
