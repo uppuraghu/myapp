@@ -1,40 +1,52 @@
-// import React, { useState } from 'react';
+// import axios from "axios";
+// import { useState } from "react";
+// import "../weatherApp/weatherAppData.css";
 
+// const WeatherApp = () => {
+//   const [city, setCity] = useState("");
+//   const [res1, setres1] = useState(0);
 
-// const App = () => {
-//   const [city,setCity]=useState("")
-//   const [result,setResult]=useState("")
-//   const changeHandler = e =>{
+//   const fetchData = async () => {
+//     try {    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2510581a618b1804ce17c37f73ff245`);
+
+//       let kelvin = response.data.main.temp;
+//       let tempToKelvin = Math.trunc(kelvin - 273.15);
+//       setres1(tempToKelvin + "°c");
+//     } catch (err) {
+//       const statusCode = err.response.data.cod;
+//       const msgData = err.response.data.message;
+//       if (statusCode === "404") {
+//         alert(msgData);
+//       }
+//     }
+//   };
+//   const inputData = (e) => {
 //     setCity(e.target.value);
-//   }
-//   const submitHandler=e=>{
-//     e.preventDefaut()
-//   fetch("https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}").then(
-//     response=>response.json()
+//   };
+//   const temp = parseInt(res1);
 
-//   ).then(data=>{
-//     const Kelvin=data.main.temp
-//     const celsius=Kelvin-273.15
-//     setResult(celsius)
-//   })
- 
-//   }
+//   let img =
+//     temp === 0
+//       ? "https://www.shutterstock.com/image-photo/blue-sky-260nw-59299873.jpg"
+//       : temp < 25
+//       ? "https://www.stormshieldapp.com/static/images/section1.1-bg.jpg"
+//       : "https://img.freepik.com/premium-vector/sky-clouds-design-with-flat-cartoon-poster-flyers-postcards-web-banners_771576-58.jpg";
+
 //   return (
-//     <div>
-//         <center>
-//           <div className='card'>
-//               <div className='card-body'><br/><br/>
-//                 <h4 className='card-title'>WEATHER APP</h4><br/>
-//                 <form onSubmit={submitHandler}>
-//                   <input type='text' name='city' value={city} onChange={changeHandler}/><br/><br/>
-//                   <input type='submit' value="Get Temperature"/>
-//                 </form>
-//                 <h3>{result}</h3>
-//               </div>
-//           </div>
-//         </center>
+//     <div
+//       id="styling"
+//       className="card"
+//       style={{ backgroundImage: url(${img}) }}
+//     >
+//       <div className="form">
+//         <input type="text" onChange={inputData} value={city} />
+
+//         <button type="submit" onClick={fetchData}>
+//           submit
+//         </button>
+//         <h2>Temparature: {res1}</h2>
+//       </div>
 //     </div>
 //   );
-// }
-
-// export default App;
+// };
+// export default WeatherApp;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const App = () => {
   const [city, setCity] = useState("");
   const [result, setResult] = useState("");
@@ -11,7 +12,7 @@ const App = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     const apiKey = 'your_api_key_here';  // replace with your actual API key
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2510581a618b1804ce17c37f73ff245`)
       .then(response => response.json())
       .then(data => {
         if (data.main) {
@@ -30,6 +31,7 @@ const App = () => {
 
   return (
     <div>
+   
       <center>
         <div className='card'>
           <div className='card-body'><br/><br/>
