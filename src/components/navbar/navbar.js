@@ -2,7 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import "./navbar.css"
 
-function Navbar() {
+function Navbar(prop) {
+  console.log(prop)
     const NavLinkStyle={
         textDecoration: 'none',
     }

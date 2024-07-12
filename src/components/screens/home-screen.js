@@ -17,7 +17,7 @@ function HomeScreen() {
   return (
     
     <div>
-      <Navbar/>
+      <Navbar darkTheme={true}/>
       <UseReducer/>
       <h2>wellcome to home screen {sharedData.profileInfo.name} {" "}{sharedData.profileInfo.salary}</h2>
       <h4>{sharedData.counter}</h4>
