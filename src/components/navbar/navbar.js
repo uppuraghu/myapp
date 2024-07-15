@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import "./navbar.css"
+import loggingComponent from '../hoc/logging'
 
 function Navbar(prop) {
-  console.log(prop)
+
     const NavLinkStyle={
         textDecoration: 'none',
     }
@@ -50,4 +51,4 @@ function Navbar(prop) {
   )
 }
 
-export default Navbar
+export default loggingComponent(Navbar)

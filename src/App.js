@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Stack } from 'react-bootstrap';
 import Stacks from './Navigations/stack';
+import HomeScreen from './components/screens/home-screen';
+import Navbar from './components/navbar/navbar';
 // import Stacks from './Navigations/stack';
 // import ButtonComponent from './components/button/button';
 
@@ -22,6 +24,7 @@ const App = () => {
   return (
     <div>
        <Stacks/>
+      
     </div>
   );
 }

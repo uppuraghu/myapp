@@ -8,6 +8,8 @@ import ProductDetail from '../components/screens/products-details-screen'
 import Doctorscreen from '../components/screens/doctor-screen'
 import Engineerscreen from '../components/screens/engneer-screen'
 import InvalidScreen from '../components/screens/invalid-screen' 
+// import UseReducer from '../components/useReducer/useReducer'
+// import UseReducerEx1 from '../components/useReducer/useReducerEx1'
 // import LazySetting=React.lazy(()=>import("../components/screens/settings-screen"))
 const LazySetting=React.lazy(()=>import("../components/screens/settings-screen"))
 
@@ -47,7 +49,7 @@ function Stacks() {
         decrementHandler:decrementHandler,
       }}>      
            {/* value is a PROP */}
-
+     
      
     <BrowserRouter>
       <Routes>

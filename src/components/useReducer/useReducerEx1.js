@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 import { initialState, reducer } from "./jsFunctions";
+import loggingComponent from "../hoc/logging";
 
 const UseReducerEx1 = () => {
   const [currentState, dispatch] = useReducer(reducer, initialState);
@@ -65,4 +66,4 @@ const UseReducerEx1 = () => {
   );
 };
 
-export default UseReducerEx1;
+export default loggingComponent(UseReducerEx1);
