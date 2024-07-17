@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Stack } from 'react-bootstrap';
+// import { Stack } from 'react-bootstrap';
 import Stacks from './Navigations/stack';
-import HomeScreen from './components/screens/home-screen';
-import Navbar from './components/navbar/navbar';
+// import HomeScreen from './components/screens/home-screen';
+// import Navbar from './components/navbar/navbar';
+import EvenChecker from './components/useMemo/evenChecker';
+import CountryInfo from './components/countries/countries';
+import Countrydata from './components/countries/countries';
+import UseCallbackExample from './components/useCallback/useCallback';
 // import Stacks from './Navigations/stack';
 // import ButtonComponent from './components/button/button';
 
@@ -23,8 +27,11 @@ const App = () => {
   
   return (
     <div>
-       <Stacks/>
-      
+       {/* <Stacks/> 
+        <EvenChecker/>  */}
+      {/* <CountryInfo/>  */}
+      <Countrydata/> 
+      {/* <UseCallbackExample/> */}
     </div>
   );
 }
