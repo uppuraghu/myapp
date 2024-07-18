@@ -7,6 +7,9 @@ import EvenChecker from './components/useMemo/evenChecker';
 import CountryInfo from './components/countries/countries';
 import Countrydata from './components/countries/countries';
 import UseCallbackExample from './components/useCallback/useCallback';
+import Counterexample from './components/customHooks/counter-example';
+import DataFetch from './components/data-fetch-component';
+import Userlist from './components/user-list';
 // import Stacks from './Navigations/stack';
 // import ButtonComponent from './components/button/button';
 
@@ -30,8 +33,14 @@ const App = () => {
        {/* <Stacks/> 
         <EvenChecker/>  */}
       {/* <CountryInfo/>  */}
-      <Countrydata/> 
+      {/* <Countrydata/>  */}
       {/* <UseCallbackExample/> */}
+      <Userlist/>
+
+      {/* <Counterexample/> */}
+      <DataFetch/>
+      
+
     </div>
   );
 }
