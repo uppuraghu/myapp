@@ -9,11 +9,11 @@ function Colorpicker() {
   return (
     <div className='color-picker-container'> 
     <h1>colorpicker</h1>
-    <div className='color-display' style={{backgroundColor:color}}>
-        <p>selected color:{color}</p>
+    <div className='color-display' style={{backgroundColor:color}} height="100%">
+        <p >selected color:{color}  </p>
     </div>
     <label>select color</label>
-    <input type='color' value={color} onChange={handlecolorChange}/>
+    <input type='color' value={color}  onChange={handlecolorChange}/>
      </div>
     
   )

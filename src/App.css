@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 } */
-.color-picker-container{
+/* .color-picker-container{
   display: flex;
            flex-direction: column;
            align-items: center;
@@ -55,4 +55,10 @@ h1{
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+} */
+
+
+
+.color-display{
+  height: 100%;
 }
