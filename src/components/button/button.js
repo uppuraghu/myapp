@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import "./button.css"; // Remove this if not used
 
-const ButtonComponent = ({ text, bgColor, onPress,  height }) => {
+const ButtonComponentt = ({ text, bgColor, onPress,  height }) => {
     return (
         <button
             onClick={onPress}
@@ -13,7 +13,7 @@ const ButtonComponent = ({ text, bgColor, onPress,  height }) => {
     );
 };
 
-ButtonComponent.propTypes = {
+ButtonComponentt.propTypes = {
     text: PropTypes.string,
     bgColor: PropTypes.string,
     onPress: PropTypes.func,
@@ -21,7 +21,7 @@ ButtonComponent.propTypes = {
     height: PropTypes.string
 };
 
-ButtonComponent.defaultProps = {
+ButtonComponentt.defaultProps = {
     text: '',
     bgColor: 'green',
     onPress: () => {},
@@ -29,4 +29,4 @@ ButtonComponent.defaultProps = {
     height: '50px'
 };
 
-export default ButtonComponent;
+export default ButtonComponentt;
