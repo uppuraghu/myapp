@@ -42,6 +42,7 @@ const CountryData = () => {
     return (
         <>
             <div>
+                
                 <form onSubmit={handleSearchSubmit} className="search-top">
                     <input
                         type="text"
