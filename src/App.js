@@ -1,43 +1,38 @@
-import React from "react";
-import Appmmmm from "./components/curency-conveter/curncy";
-import Rep from "./components/recipesdataaaprj";
-import Countr from "./components/countrsprj";
-import WeatherApp from "./components/weatherapp";
-import Countrs from "./countrycurrency/c";
-import Countrqq from "./countrycurrency/c";
-import Countrp from "./countrycurrency/c";
-import { RecipeProvider } from './components/x';
-import UseReducer from "./components/useReducer/useReducer";
-import Counterpi from "./components/useReducer/prt";
-import FocusInput from "./components/useReducer/q";
-import Signup from "./components/timepass";
+import React, { createContext, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Modal from "./components/optimworks/o4";
+import Menu from "./components/optimworks/o1";
+import OrderHistory from "./components/optimworks/o2";
+import Cart from "./components/optimworks/o3";
 
+export const OrderContext = createContext();
 
-// import Countr from "./components/countrsprj";
-// import Rep from "./components/recipesdataaaprj";
-// import WeatherApp from "./components/weatherapp";
-// import CurrencyConverter from "./components/curency-conveter/curncy";
+const App = () => {
+  const [orders, setOrders] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
-function Zmmmm() {
   return (
-    <>
-      {/* <Signup/> */}
-      {/* <Counterpi/> */}
-      {/* <Rep /> */}
-      {/* <FocusInput/> */}
-   
-    {/* <UseReducer/> */}
-    {/* <CurrencyConverter/> */}
-    {/* <Appmmmm/> */}
-    {/* <Countr/> */}
- {/* <Countrp/> */}
-<Rep/>
- {/* <Countr/> */}
-{/* <WeatherApp/> */}
+    <OrderContext.Provider value={{ orders, setOrders }}>
+      <Router>
+        <div className="app">
+          <h1 className="app-title">ZestZing</h1>
+          <button onClick={toggleModal}>View Cart</button> {/* Button to open the cart */}
+          <Modal isOpen={isModalOpen} onClose={toggleModal}>
+            <Cart /> {/* Display the Cart component in the modal */}
+          </Modal>
+          <Routes>
+            <Route path="/" element={<Menu />} />
+            <Route path="/order-history" element={<OrderHistory />} />
+          </Routes>
+        </div>
+      </Router>
+    </OrderContext.Provider>
+  );
+};
 
-    </>
-  )
-}
-
-export default Zmmmm
+export default App;
